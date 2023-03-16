@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/664.bada924a.chunk.js","mappings":"4KAAaA,EAAY,WACvB,OACE,+BACE,uCAGL,EAED,W","sources":["pages/LoginPage/LoginPage.jsx"],"sourcesContent":["export const LoginPage = () => {\r\n  return (\r\n    <>\r\n      <h1>LoginPage</h1>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default LoginPage;\r\n"],"names":["LoginPage"],"sourceRoot":""}
