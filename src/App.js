@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
+import { Loader } from "./components/Loader/Loader";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
 import AuthNav from "./components/AuthNav/AuthNav";
 import NoticesCategoryList from "./components/NoticesCategoriesList/NoticesCategoriesList";
@@ -29,13 +30,55 @@ export function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route path="auth/" element={<AuthNav />}>
-            <Route path="register" element={<RegisterPage />}></Route>
-            <Route path="login" element={<LoginPage />}></Route>
+            <Route
+              path="register"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <RegisterPage />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="login"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <LoginPage />
+                </Suspense>
+              }
+            ></Route>
           </Route>
-          <Route path="user/" element={<UserPage />}>
-            <Route path="news/" element={<NewsPage />}></Route>
-            <Route path="notices/" element={<NoticesPage />}>
-              <Route path="sell" element={<NoticesCategoryList />}></Route>
+          <Route
+            path="user/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <UserPage />
+              </Suspense>
+            }
+          >
+            <Route
+              path="news/"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <NewsPage />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="notices/"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <NoticesPage />
+                </Suspense>
+              }
+            >
+              <Route
+                path="sell"
+                element={
+                  <Suspense fallback={<Loader />}>
+                    <NoticesCategoryList />
+                  </Suspense>
+                }
+              ></Route>
               <Route
                 path="lost-found"
                 element={<NoticesCategoryList />}
