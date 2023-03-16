@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Button } from "./Header.styled";
 
 export const Header = () => {
   return (
@@ -6,16 +6,16 @@ export const Header = () => {
       <h1>Header</h1>
       <ul>
         <li>
-          <Link to="auth">auth</Link>
-          <Link to="auth/register">register</Link>
-          <Link to="auth/login">login</Link>
-          <Link to="user">user</Link>
-          <Link to="friends">friends</Link>
-          <Link to="user/news"></Link>
-          <Link to="user/notices">notices</Link>
-          <Link to="user/notices/sell">sell</Link>
-          <Link to="user/notices/lost-found">lost-found</Link>
-          <Link to="user/notices/for-free">for-free</Link>
+          <Button to="auth">auth</Button>
+          <Button to="auth/register">register</Button>
+          <Button to="auth/login">login</Button>
+          <Button to="user">user</Button>
+          <Button to="user/friends">friends</Button>
+          <Button to="user/news"></Button>
+          <Button to="user/notices">notices</Button>
+          <Button to="user/notices/sell">sell</Button>
+          <Button to="user/notices/lost-found">lost-found</Button>
+          <Button to="user/notices/for-free">for-free</Button>
         </li>
       </ul>
     </>
