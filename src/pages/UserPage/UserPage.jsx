@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import { HomeTitle } from "../../components/MainTitle/MainTitle";
 
 export const UserPage = () => {
   return (
     <>
-      <h1>UserPage</h1>
+      <HomeTitle />
       <Outlet />
     </>
   );
