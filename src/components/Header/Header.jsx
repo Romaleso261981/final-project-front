@@ -11,7 +11,7 @@ export const Header = () => {
           <Button to="auth/login">login</Button>
           <Button to="user">user</Button>
           <Button to="user/friends">friends</Button>
-          <Button to="user/news"></Button>
+          <Button to="user/news">news</Button>
           <Button to="user/notices">notices</Button>
           <Button to="user/notices/sell">sell</Button>
           <Button to="user/notices/lost-found">lost-found</Button>
