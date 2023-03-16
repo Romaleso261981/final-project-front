@@ -1,9 +1,10 @@
-import { Button } from "./Header.styled";
+import { Button, LogoPetly } from "./Header.styled";
+import { Container } from "../Container/Container";
 
 export const Header = () => {
   return (
-    <>
-      <h1>Header</h1>
+    <Container>
+      {/* <LogoPetly>Find pet</LogoPetly> */}
       <ul>
         <li>
           <Button to="auth">auth</Button>
@@ -18,7 +19,7 @@ export const Header = () => {
           <Button to="user/notices/for-free">for-free</Button>
         </li>
       </ul>
-    </>
+    </Container>
   );
 };
 

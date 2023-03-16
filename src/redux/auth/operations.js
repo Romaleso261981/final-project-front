@@ -1,17 +1,18 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-// import Notiflix from 'notiflix';
-// import { toast } from 'react-toastify';
-// import { notifySettings } from '../../utils/notifySettings';
+import Notiflix from "notiflix";
+import { toast } from "react-toastify";
+import { notifySettings } from "../../utils/notifySettings";
+import { API } from "../../API";
 
 const Register = createAsyncThunk("auth/register", async (credentials) => {
-  // try {
-  //   console.log('Register');
-  //   const data = await AUTH_API.post('/register', credentials);
-  //   console.log(data);
-  //   return data;
-  // } catch (error) {
-  //   toast.error('Server error, please try again later');
-  // }
+  try {
+    console.log("Register");
+    const data = await API.post("/register", credentials);
+    console.log(data);
+    return data;
+  } catch (error) {
+    toast.error("Server error, please try again later");
+  }
 });
 
 const logIn = createAsyncThunk("auth/login", async (credentials) => {
@@ -57,33 +58,32 @@ const logOut = createAsyncThunk("/auth/logout", async (_, thunkAPI) => {
   // }
 });
 
-const refreshUser =
-  createAsyncThunk();
-  // 'auth/refresh',
-  // async (_, { getState, rejectWithValue }) => {
-  //   try {
-  //     console.log('refreshUser');
-  //     const state = getState();
-  //     const { token } = state.auth;
-  //     setToken(token);
-  //     const { data } = await API.get('/users/current');
-  //     return data;
-  //   } catch ({ response }) {
-  //     const { status, data } = response;
-  //     const error = {
-  //       status,
-  //       message: data.message,
-  //     };
-  //     const state = getState();
-  //     const { lang } = state.language.lang;
-  //     lang === 'en'
-  //       ? Notiflix.Notify.failure('Please login again!', notifySettings)
-  //       : Notiflix.Notify.failure(
-  //           'Будь ласка, залогіньтесь знову!',
-  //           notifySettings,
-  //         );
-  //     return rejectWithValue(error);
-  //   }
-  // },
+const refreshUser = createAsyncThunk();
+// 'auth/refresh',
+// async (_, { getState, rejectWithValue }) => {
+//   try {
+//     console.log('refreshUser');
+//     const state = getState();
+//     const { token } = state.auth;
+//     setToken(token);
+//     const { data } = await API.get('/users/current');
+//     return data;
+//   } catch ({ response }) {
+//     const { status, data } = response;
+//     const error = {
+//       status,
+//       message: data.message,
+//     };
+//     const state = getState();
+//     const { lang } = state.language.lang;
+//     lang === 'en'
+//       ? Notiflix.Notify.failure('Please login again!', notifySettings)
+//       : Notiflix.Notify.failure(
+//           'Будь ласка, залогіньтесь знову!',
+//           notifySettings,
+//         );
+//     return rejectWithValue(error);
+//   }
+// },
 
 export { Register, logIn, logOut, refreshUser };
