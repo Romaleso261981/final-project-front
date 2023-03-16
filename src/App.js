@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
-import { SharedLayout } from "./components/SharedLayout/SharedLayout";
+import SharedLayout from "./components/SharedLayout/SharedLayout";
 import AuthNav from "./components/AuthNav/AuthNav";
 import NoticesCategoryList from "./components/NoticesCategoriesList/NoticesCategoriesList";
 
