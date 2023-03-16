@@ -71,14 +71,7 @@ export function App() {
                 </Suspense>
               }
             >
-              <Route
-                path="sell"
-                element={
-                  <Suspense fallback={<Loader />}>
-                    <NoticesCategoryList />
-                  </Suspense>
-                }
-              ></Route>
+              <Route path="sell" element={<NoticesCategoryList />}></Route>
               <Route
                 path="lost-found"
                 element={<NoticesCategoryList />}
