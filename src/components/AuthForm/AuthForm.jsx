@@ -26,7 +26,13 @@ import {
   PasswordIcon,
 } from "./AuthForm.styled";
 // import { getLang } from "redux/lang/langSelectors";
+const lang = "ua";
 
+const formTitle = "login";
+const btnText = "Log in";
+const navLinkText = "Register";
+const navLinkAdress = "/register";
+const hintText = "Or log in using an email and password, after registering:";
 export const AuthForm = ({
   formTitle,
   btnText,
