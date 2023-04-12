@@ -12,7 +12,6 @@ const LoginPage = () => {
   return (
     <Container>
         <ContentWrapper>
-          <AuthPageLogo />
           <AuthForm
             formTitle="login"
             btnText={lang === "en" ? "Log in" : "Логін"}

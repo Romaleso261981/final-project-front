@@ -1,7 +1,6 @@
 import { Container, ContentWrapper } from './Register.styled';
 
 import { AuthForm } from '../../components/AuthForm/AuthForm';
-import { AuthPageLogo } from '../../components/AuthPageLogo/AuthPageLogo';
 import { useSelector } from 'react-redux';
 import { getLang } from '../../redux/lang/langSelectors';
 
@@ -10,7 +9,6 @@ const RegisterPage = () => {
   return (
     <Container>
       <ContentWrapper>
-        <AuthPageLogo />
         <AuthForm
           formTitle="register"
           btnText={lang === 'en' ? 'Register' : 'Реєстрація'}

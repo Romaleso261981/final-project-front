@@ -3,20 +3,17 @@ import styled from "styled-components";
 export const LogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 183px;
-  margin-bottom: 50px;
-  margin-left: -70%;
   align-self: flex-start;
+  margin-left: -70%;
 
   & p {
-    font-size: 13px;
+    font-size: 23px;
     line-height: 15px;
     letter-spacing: 0.15em;
     line-height: 1.16px;
     text-align: start;
     display: inline-block;
-    margin-left: 15%;
-    margin-top: 2%;
+    margin-top: 50%;
     font-weight: 700;
     text-transform: uppercase;
     color: ${(p) => p.theme.colors.logoGrey};
