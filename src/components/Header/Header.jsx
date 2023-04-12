@@ -15,15 +15,14 @@ import {
 } from "./Header.styled";
 // import { useAuth } from "hooks";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../hooks/useAuth";
-import { selectAccessToken } from "../../redux/auth/selectors";
 import { logOut } from "../../redux/auth/operations";
 import svg from "../../assets/image/icons_sprite.svg";
 import { Popup } from "../../components/Popup/Popup";
 import { ThemeSwitcher } from "../../components/ThemeBtn/ThemeBtn";
 import { LangSwitcher } from "../../components/LanguageBtn/LangBtn";
+import Navigation from "../../components/Navigation/Navigation";
 import { getLang } from "../../redux/lang/langSelectors";
 
 export function Header() {
@@ -62,6 +61,7 @@ export function Header() {
           </LogoSvg>
         </LogoContainer>
         <ControlsWrapper>
+          <Navigation />
           <ThemeSwitcher />
           <LangSwitcher />
           {token && (

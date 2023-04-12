@@ -6,12 +6,17 @@ export const ImgWrapp = styled.div`
   width: 100%;
   // width: 280px;
   // height: 50px;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 80% 20%;
   background: url(${banner});
 
   @media screen and (min-width: 1280px) {
-    // flex-direction: row;
-    // align-items: center;
-    // gap: 157px;
+    flex-direction: row;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 20%;
+    background: url(${banner});
   }
 `;

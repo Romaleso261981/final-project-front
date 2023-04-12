@@ -7,7 +7,6 @@ export const SharedLayout = () => {
   return (
     <Background>
       <Header />
-      <LoginPage />
       <Outlet />
     </Background>
   );

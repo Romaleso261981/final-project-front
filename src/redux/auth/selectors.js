@@ -7,3 +7,4 @@ export const getEmail = (state) => state.auth.user.email;
 export const getLoadingStatus = (state) => state.auth.user.email;
 export const getLogStatus = (state) => state.auth.user.email;
 export const getUser = (state) => state.auth;
+export const selectIsLoggedIn = (state) => state.auth;
