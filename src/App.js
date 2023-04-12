@@ -8,8 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AuthForm = lazy(() => import("./components/AuthForm/AuthForm"));
 export function App() {
-  const selectedMode = useSelector(getMode);
-  const themeMode = selectedMode.mode === "light" ? darkTheme : theme;
 
   return (
     <Routes>
