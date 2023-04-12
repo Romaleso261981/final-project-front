@@ -1,5 +1,5 @@
-import { ContainerWrapp } from "./Container.styled";
+import styled from "./Container.module.scss";
 
 export const Container = ({ children }) => {
-  return <ContainerWrapp>{children}</ContainerWrapp>;
+  return <div className={styled.container}>{children}</div>;
 };

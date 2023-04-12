@@ -1,4 +1,4 @@
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import { useNavigate } from "react-router";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -25,28 +25,21 @@ import {
   PasswordBtn,
   PasswordIcon,
 } from "./AuthForm.styled";
-// import { getLang } from "redux/lang/langSelectors";
-const lang = "ua";
+import { getLang } from "../../redux/lang/langSelectors";
 
 const formTitle = "login";
 const btnText = "Log in";
 const navLinkText = "Register";
 const navLinkAdress = "/register";
 const hintText = "Or log in using an email and password, after registering:";
-export const AuthForm = ({
-  formTitle,
-  btnText,
-  navLinkText,
-  navLinkAdress,
-  hintText,
-}) => {
+export const AuthForm = () => {
   // const dispatch = useDispatch();
   // const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isPasswordShown, setIsPasswordShown] = useState(false);
-
+  const lang = useSelector(getLang).lang;
   const handleShowPassword = () => {
     setIsPasswordShown(!isPasswordShown);
   };
@@ -72,10 +65,12 @@ export const AuthForm = ({
       return null;
     }
     if (formTitle === "login") {
-      dispatch(logIn({ email, password }));
+      console.log(email, password);
+      // dispatch(logIn({ email, password }));
     } else {
-      dispatch(Register({ email, password }));
-      navigate("/registri");
+      console.log(email, password);
+      // dispatch(Register({ email, password }));
+      // navigate("/registri");
     }
 
     resetForm();
@@ -91,12 +86,12 @@ export const AuthForm = ({
     <FormWrapper>
       {formTitle === "login" && (
         <>
-          {lang === "en" ? (
+          {lang !== "en" ? (
             <Hint>You can log in with your Google Account:</Hint>
           ) : (
             <Hint>Ви можете залогінитись через Google Account:</Hint>
           )}
-          <GoogleLoginLink href="https://auth/google">
+          <GoogleLoginLink href="https://google.com">
             <FcGoogle />
             Google
           </GoogleLoginLink>

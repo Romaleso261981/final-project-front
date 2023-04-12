@@ -1,0 +1,73 @@
+.container {
+  width: 300px;
+  height: 150px;
+  background: var(--white-color);
+  box-shadow: 10px 10px 30px rgba(82, 85, 95, 0.4);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  @media screen and (min-width: 768px) {
+    width: 380px;
+    height: 194px;
+    z-index: 99999;
+  }
+}
+
+.btnCloseModal {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-color: transparent;
+}
+.question {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+}
+
+.btnYes {
+  width: 125px;
+  height: 44px;
+  border-color: transparent;
+  background: var(--accent-color);
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.btnNo {
+  width: 125px;
+  height: 44px;
+
+  border: 2px solid var(--grey-bg-home-color);
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--time), visibility 250ms var(--time);
+}

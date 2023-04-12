@@ -7,7 +7,7 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${p => p.theme.colors.PrimaryWhite};
+  background-color: ${(p) => p.theme.colors.PrimaryWhite};
   box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4);
   border-radius: 30px;
   padding: 40px 20px;
@@ -17,6 +17,7 @@ export const FormWrapper = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 426px;
+    border: 1px solid black;
     padding: 56px 84px;
     box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
   }
@@ -79,18 +80,18 @@ export const Input = styled.input`
   padding: 17px 18px;
   width: 100%;
   font-size: 14px;
-  font-family: 'Roboto';
-  background-color: ${p => p.theme.colors.SecondGray};
+  font-family: "Roboto";
+  background-color: ${(p) => p.theme.colors.SecondGray};
   border-radius: 30px;
-  border: none;
-  color: ${p => p.theme.colors.authFormInputText};
+  border: 1px solid black;
+  color: ${(p) => p.theme.colors.authFormInputText};
   margin-bottom: 4px;
   &::placeholder {
-    color: ${p => p.theme.colors.placeholderGrey};
+    color: ${(p) => p.theme.colors.placeholderGrey};
   }
   &:focus {
-    color: ${p => p.theme.colors.authFormInputText};
-    outline: 1px solid ${p => p.theme.colors.PrimaryOrange};
+    color: ${(p) => p.theme.colors.authFormInputText};
+    outline: 1px solid ${(p) => p.theme.colors.PrimaryOrange};
     -moz-outline-radius: 30px;
   }
 `;

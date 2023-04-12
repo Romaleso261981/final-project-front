@@ -1,0 +1,38 @@
+@import '../../sass/mixin';
+
+.btnBack {
+  width: 45px;
+  // margin-bottom: 22px;
+  border: none;
+  background-color: transparent;
+
+  transform: translate;
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: translate(-5px);
+  }
+  @include mq(tab) {
+    width: 100px;
+    display: flex;
+    align-items: center;
+  }
+}
+.title {
+  color: var(--light-grey);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  position: relative;
+  top: 1px;
+
+  margin-left: 15px;
+  @include mq(desk) {
+    margin-left: 19px;
+  }
+}
+.svg {
+  width: 18px;
+  height: 12px;
+}

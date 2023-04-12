@@ -1,0 +1,74 @@
+@import '../../sass/mixin';
+
+.pagContainer {
+  width: 128px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.paragraph {
+  display: inline-flex;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+  color: var(--descr-gray);
+}
+
+.btnContainer {
+  position: relative;
+  display: inline-flex;
+}
+
+.btnLeft {
+  width: 50px;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  top: -3px;
+  left: -29px;
+
+  transform: translate;
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: translate(-5px);
+  }
+}
+
+.btnRigth {
+  width: 50px;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  top: -2.5px;
+  right: -18px;
+
+  transform: translate;
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: translate(5px);
+  }
+}
+
+.month {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.nomthBox {
+  display: flex;
+  width: 118px;
+  justify-content: center;
+}

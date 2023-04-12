@@ -1,9 +1,9 @@
 import { TailSpin } from "react-loader-spinner";
-import { LogoWrapp } from "./Loader.styled";
+import styled from "./Loader.module.scss";
 
 export const Loader = () => {
   return (
-    <LogoWrapp>
+    <div className={styled.wrapper}>
       <div>
         <TailSpin
           height="150"
@@ -12,7 +12,7 @@ export const Loader = () => {
           ariaLabel="loading-indicator"
         />
       </div>
-    </LogoWrapp>
+    </div>
   );
 };
 export default Loader;

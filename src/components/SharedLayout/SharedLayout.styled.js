@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import img from "../../assets/png/Header_bg.png";
 
 export const ImgWrapp = styled.div`
   background-color: ${(p) => p.theme.colors.PrimaryOrange};
@@ -10,8 +11,8 @@ export const ImgWrapp = styled.div`
 `;
 export const MainTitle = styled.div`
   position: absolute;
-  width: 588px;
-  height: 200px;
+  width: 58px;
+  height: 100px;
   left: 16px;
   top: 160px;
 

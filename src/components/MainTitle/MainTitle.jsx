@@ -1,12 +1,19 @@
-import { ImgWrapp, MainTitle } from "./MainTitle.styled";
+import { motion } from "framer-motion";
+import { ReactComponent as KapustaTitle } from "assets/image/name.svg";
+import styled from "./MainTitle.module.scss";
 
-export const HomeTitle = () => {
+export const MainTitle = () => {
   return (
-    <>
-      <ImgWrapp></ImgWrapp>
-      <MainTitle>Take good care of your small pets</MainTitle>
-    </>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
+      className={styled.containerTitle}
+    >
+      <h1 className={styled.title}>
+        <KapustaTitle className={styled.cabbage} />
+      </h1>
+      <p className={styled.preTitle}>Smart Finance</p>
+    </motion.div>
   );
 };
-
-export default HomeTitle;
