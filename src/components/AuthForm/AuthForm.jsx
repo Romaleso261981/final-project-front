@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useNavigate } from "react-router";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 // import { logIn, Register } from '../../redux/auth/operations';
@@ -25,7 +25,7 @@ import {
   PasswordBtn,
   PasswordIcon,
 } from "./AuthForm.styled";
-import { getLang } from "redux/lang/langSelectors";
+// import { getLang } from "redux/lang/langSelectors";
 
 export const AuthForm = ({
   formTitle,
@@ -34,9 +34,8 @@ export const AuthForm = ({
   navLinkAdress,
   hintText,
 }) => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const lang = useSelector(getLang).lang;
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
