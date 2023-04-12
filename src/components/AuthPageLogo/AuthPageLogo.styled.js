@@ -5,6 +5,7 @@ export const LogoWrapper = styled.div`
   flex-direction: column;
   width: 183px;
   margin-bottom: 50px;
+  margin-left: -70%;
   align-self: flex-start;
 
   & p {
@@ -32,10 +33,10 @@ export const LogoWrapper = styled.div`
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (max-width: 1280px) {
     width: 377px;
     margin-bottom: 0;
-    margin-bottom: 222px;
+    margin-bottom: 622px;
     align-self: flex-end;
   }
 `;
