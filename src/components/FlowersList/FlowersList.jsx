@@ -1,7 +1,7 @@
-import { List } from './FlowersList.styled';
+import { List } from "./FlowersList.styled";
 import { Container } from "../Container/Container";
 
-import FlowersItem from './FlowersItem';
+import FlowersItem from "./FlowersItem";
 
 const FlowersList = ({ flowers }) => {
   return (

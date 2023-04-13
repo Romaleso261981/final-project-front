@@ -166,6 +166,7 @@ export const FlowersDate = styled.p`
   font-weight: 400;
 `;
 export const FlowersLink = styled.a`
+
   color: #f59256;
   text-decoration: underline;
   transition: all 250ms ease-in-out;
