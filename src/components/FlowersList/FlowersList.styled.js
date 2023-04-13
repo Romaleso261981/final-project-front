@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const FlowersSection = styled.div`
   display: flex;
@@ -139,7 +139,7 @@ export const FlowersTitle = styled.h2`
   letter-spacing: -0.01em;
 `;
 export const FlowersDescr = styled.p`
-  color: #111321;
+  color: #f5f6fa;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -157,19 +157,35 @@ export const FlowersDescr = styled.p`
     -webkit-line-clamp: 5;
   }
 `;
-export const FlowersContainer = styled.div`
+export const FlowersImgContainer = styled.div`
+  min-height: 200px;
   display: flex;
   justify-content: space-between;
 `;
+export const Image = styled.img`
+  width: 240px;
+  height: 240px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 4/4;
+  @media screen and (min-width: 768px) {
+    width: 161px;
+    height: 161px;
+    border-radius: 40px;
+    margin-right: 32px;
+  }
+`;
+
 export const FlowersDate = styled.p`
   color: rgba(17, 17, 17, 0.6);
   font-weight: 400;
 `;
 export const FlowersLink = styled.a`
-
-  color: #f59256;
+  color: #1307f0;
   text-decoration: underline;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
 
   &:hover {
     color: #ff7f2f;

@@ -1,35 +1,36 @@
 import { format } from "date-fns";
+import { useState } from "react";
 
 import {
   OneFlowers,
   FlowersLine,
   FlowersTitle,
   FlowersDescr,
-  FlowersContainer,
+  FlowersImgContainer,
+  Image,
   FlowersDate,
   FlowersLink,
 } from "./FlowersList.styled";
 
 const FlowersItem = ({ title, url, description, date }) => {
+  const [isShow, setIsShow] = useState(true);
+  console.log(url);
+  
+  const toggle = (e) => {
+      setIsShow(!isShow);
+    };
   return (
-    <OneFlowers>
-      <FlowersLine />
-      <FlowersTitle>{title}</FlowersTitle>
-      {description ? (
-        <FlowersDescr>{description}</FlowersDescr>
-      ) : (
-        <FlowersDescr>
-          Для ознайомлення з новиною натисніть <b>Read more</b>.
-        </FlowersDescr>
-      )}
-
-      <FlowersContainer>
+    <>
+      <OneFlowers>
+        <FlowersLine />
+        <FlowersTitle>{title}</FlowersTitle>
         {/* <FlowersDate>{format(new Date(date), "dd/MM/yyyy")}</FlowersDate> */}
-        <FlowersLink href={url} target="_blank">
-          Read more
-        </FlowersLink>
-      </FlowersContainer>
-    </OneFlowers>
+        <Image src={url} alt={title} />
+
+        <FlowersDescr>{description}</FlowersDescr>
+        <FlowersLink onClick={toggle}>Замовити</FlowersLink>
+      </OneFlowers>
+    </>
   );
 };
 
