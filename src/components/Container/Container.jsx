@@ -1,6 +1,6 @@
-import styled from "./Container.module.scss";
+import { ContainerWrapper } from "./Container.styled";
 
 export const Container = ({ children }) => {
-  return <div className={styled.container}>{children}</div>;
+  return <ContainerWrapper>{children}</ContainerWrapper>;
 };
 export default Container;

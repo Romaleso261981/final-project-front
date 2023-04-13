@@ -31,9 +31,9 @@ export const LogoWrapper = styled.div`
   }
 
   @media screen and (max-width: 1280px) {
-    width: 377px;
-    margin-bottom: 0;
-    margin-bottom: 622px;
+    width: 777px;
+    // margin-bottom: 0;
+    // margin-bottom: 122px;
     align-self: flex-end;
   }
 `;

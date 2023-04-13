@@ -11,25 +11,11 @@ export const Container = styled.main`
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    padding: 117px 171px 156px 171px;
+    padding: 10px 20px 70px 20px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 117px 91px 125px 91px;
-  }
-`;
-
-export const ContentWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    align-items: center;
-    gap: 157px;
+    padding: 40px 40px 125px 40px;
   }
 `;
 

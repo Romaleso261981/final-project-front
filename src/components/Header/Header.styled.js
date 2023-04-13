@@ -1,15 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 
 export const StyledHeader = styled.header`
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
   height: 56px;
   padding: 0 10px;
-  background-color: ${(p) => p.theme.colors.bodyColor};
-  background-image: url(../../assets/png/Header_bg.png);
+  background: linear-gradient(90deg, #ff634e 0%, #ffdf48 105.44%);
   @media screen and (min-width: 768px) {
+    padding: 0 32px;
+  }
+  @media screen and (min-width: 1280px) {
     padding: 0 32px;
   }
 `;
@@ -76,86 +80,86 @@ export const Img = styled.div`
 `;
 
 export const Avatar = styled.p`
-  color: ${(p) => p.theme.colors.logoGrey};
-  font-size: 12px;
-  font-weight: bold;
+  // color: ${(p) => p.theme.colors.logoGrey};
+  // font-size: 12px;
+  // font-weight: bold;
 `;
 
 export const Name = styled.p`
-  color: ${(p) => p.theme.colors.TextGray};
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.04em;
+  // color: ${(p) => p.theme.colors.TextGray};
+  // font-size: 12px;
+  // line-height: 1.167;
+  // letter-spacing: 0.04em;
 
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
+  // @media screen and (max-width: 480px) {
+  //   display: none;
+  // }
 `;
 
 export const Line = styled.div`
-  height: 36px;
-  width: 1px;
+  // height: 36px;
+  // width: 1px;
 
-  background-color: #e0e5eb;
+  // background-color: #e0e5eb;
 
-  margin: 0 20px;
+  // margin: 0 20px;
 
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
+  // @media screen and (max-width: 480px) {
+  //   display: none;
+  // }
 `;
 
 export const Exit = styled.button`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 700;
-  color: ${(p) => p.theme.colors.TextGray};
-  background-color: transparent;
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.04em;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
+  // display: flex;
+  // align-items: center;
+  // text-decoration: none;
+  // font-weight: 700;
+  // color: ${(p) => p.theme.colors.TextGray};
+  // background-color: transparent;
+  // font-size: 12px;
+  // line-height: 1.167;
+  // letter-spacing: 0.04em;
+  // padding: 0;
+  // border: 0;
+  // cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: ${(p) => p.theme.colors.PrimaryOrange};
-  }
+  // &:hover,
+  // &:focus {
+  //   color: ${(p) => p.theme.colors.PrimaryOrange};
+  // }
 
-  &:hover svg,
-  &:focus svg {
-    stroke: ${(p) => p.theme.colors.PrimaryOrange};
-    fill: ${(p) => p.theme.colors.PrimaryOrange};
-  }
+  // &:hover svg,
+  // &:focus svg {
+  //   stroke: ${(p) => p.theme.colors.PrimaryOrange};
+  //   fill: ${(p) => p.theme.colors.PrimaryOrange};
+  // }
 `;
 
 export const ExitText = styled.p`
-  text-decoration: underline;
+  // text-decoration: underline;
 
-  margin: 8px 0;
+  // margin: 8px 0;
 
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
+  // @media screen and (max-width: 480px) {
+  //   display: none;
+  // }
 `;
 export const RegisterText = styled.p`
-  text-decoration: underline;
+  // text-decoration: underline;
 
-  margin: 8px 0;
+  // margin: 8px 0;
 
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
+  // @media screen and (max-width: 480px) {
+  //   display: none;
+  // }
 `;
 
 export const ExitSvg = styled.svg`
-  display: none;
-  width: 16px;
-  height: 16px;
+  // display: none;
+  // width: 16px;
+  // height: 16px;
 
-  @media screen and (max-width: 480px) {
-    display: block;
-  }
+  // @media screen and (max-width: 480px) {
+  //   display: block;
+  // }
 `;

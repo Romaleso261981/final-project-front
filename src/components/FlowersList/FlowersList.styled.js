@@ -1,12 +1,30 @@
 import styled from "@emotion/styled";
 
+export const ListWrapper = styled.div`
+  display: flex;
+  list-style: none;
+  background-color: rgba(117, 190, 218, 0.2);
+  @media screen and (max-width: 767.9px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 40px;
+  }
+`;
 export const FlowersSection = styled.div`
   display: flex;
   flex-direction: column;
   padding: 42px 20px 100px 20px;
+  margin-left: 0px;
+  background: #ffffff;
 
   @media screen and (min-width: 1280px) {
     padding: 88px 20px 100px 20px;
+    margin-left: 0px;
   }
   @media screen and (min-width: 1280px) {
     padding: 58px 20px 200px 20px;
@@ -92,20 +110,6 @@ export const DeleteBtn = styled.button`
   }
 `;
 
-export const List = styled.ul`
-  display: flex;
-  list-style: none;
-  gap: 40px;
-  @media screen and (max-width: 767.9px) {
-    flex-direction: column;
-  }
-  @media screen and (min-width: 768px) {
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  @media screen and (min-width: 1280px) {
-  }
-`;
 
 export const OneFlowers = styled.li`
   @media screen and (min-width: 768px) {
@@ -139,8 +143,7 @@ export const FlowersTitle = styled.h2`
   letter-spacing: -0.01em;
 `;
 export const FlowersDescr = styled.p`
-  color: #f5f6fa;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 20px;

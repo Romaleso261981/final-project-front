@@ -14,7 +14,6 @@ import {
 
 const FlowersItem = ({ title, url, description, date }) => {
   const [isShow, setIsShow] = useState(true);
-  console.log(url);
   
   const toggle = (e) => {
       setIsShow(!isShow);
