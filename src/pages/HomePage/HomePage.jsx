@@ -9,16 +9,9 @@ import { useState } from "react";
 
 export const HomePage = () => {
   const [showFullItem, setIsShowFullItem] = useState(false);
-  const [FullItem, setFullItem] = useState({});
 
   function onShowItem() {
   setIsShowFullItem(!showFullItem);
-  //   console.log(e.target);
-  //   // FlowersItem.forEach((el) => {
-  //   //   if (el._id === id) {
-  //   //     console.log(el);
-  //   //   }
-  //   // });
   }
 
   return (

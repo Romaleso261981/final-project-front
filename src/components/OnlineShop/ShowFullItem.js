@@ -1,5 +1,12 @@
 import React from "react";
 
+const title = "Букет 25 белых тюльпанов";
+const url = "https://flowers.ua/images/Flowers/2635.jpg";
+const description =
+  "Нежная охапка белых весенних тюльпанов не оставит равнодушной ни одну представительницу прекрасного пола! Состав: 25 белых тюльпанов, оформление.";
+const date = "25.06.2022";
+const id = "1";
+
 export const ShowFullItem = ({ onShowItem }) => {
   return (
     <div className="full-item">
@@ -14,10 +21,10 @@ export const ShowFullItem = ({ onShowItem }) => {
         <div className="add-to-cart" onClick={onShowItem}>
           +
         </div> */}
-        <div>Photo</div>
-        <h2>Title</h2>
-        <p>description</p>
-        <b>Cost $</b>
+        <div>{url}</div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <b>{date} $</b>
         <div className="add-to-cart" onClick={onShowItem}>
           +
         </div>
