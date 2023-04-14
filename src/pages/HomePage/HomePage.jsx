@@ -21,7 +21,7 @@ export const HomePage = () => {
         <FlowersList flowers={FlowersItem} onShowItem={onShowItem} />
       </Container>
       {showFullItem && (
-        <ShowFullItem onShowItem={onShowItem} FullItem={FullItem} />
+        <ShowFullItem onShowItem={onShowItem} />
       )}
     </Background>
   );

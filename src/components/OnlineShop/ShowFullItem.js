@@ -21,7 +21,7 @@ export const ShowFullItem = ({ onShowItem }) => {
         <div className="add-to-cart" onClick={onShowItem}>
           +
         </div> */}
-        <div>{url}</div>
+        <img src={url} className="item img" />
         <h2>{title}</h2>
         <p>{description}</p>
         <b>{date} $</b>
