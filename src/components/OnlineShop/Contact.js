@@ -1,6 +1,24 @@
 import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import Order from "./Order";
+
+const orders = [
+  // {
+  //   title: "Букет 25 белых тюльпанов",
+  //   url: "https://flowers.ua/images/Flowers/2635.jpg",
+  //   description:
+  //     "Нежная охапка белых весенних тюльпанов не оставит равнодушной ни одну представительницу прекрасного пола! Состав: 25 белых тюльпанов, оформление.",
+  //   date: "25.06.2022",
+  //   _id: "1",
+  // },
+  // {
+  //   title: "25 Белых розы в корзине",
+  //   url: "https://flowers.ua/images/Flowers/thumbnail/1079.jpg",
+  //   description:
+  //     "Шикарные красные розы - лучший подарок Состав 15 красных роз высота до 60 см оформление",
+  //   date: "25.06.2022",
+  //   _id: "2",
+  // },
+];
 
 const showOrders = ({ categories, onDelete }) => {
   let summa = 0;
@@ -15,23 +33,22 @@ const showOrders = ({ categories, onDelete }) => {
   );
 };
 
-const showNothing = () => {
-  return (
-    <div className="empty">
-      <h2>Товаров нет</h2>
-    </div>
-  );
-};
+// const showNothing = () => {
+//   return (
+//     <div className="empty">
+//       <h2>Товаров нет</h2>
+//     </div>
+//   );
+// };
 
  
-  export function Header({ categories }) {
+  export function Contact({ categories, orders }) {
     let [cartOpen, setCartOpen] = useState(false);
 
     return (
       <>
         <header className="shopHeader">
           <div>
-            <span className="logo">House Staff</span>
             <ul className="nav">
               <li>Про нас</li>
               <li>Контакты</li>
@@ -55,4 +72,4 @@ const showNothing = () => {
       </>
     );
   }
-export default Header;
+export default Contact;

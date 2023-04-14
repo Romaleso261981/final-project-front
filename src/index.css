@@ -305,7 +305,7 @@ header .shop-cart .summa {
   margin-bottom: 20px;
 }
 
-header .presentation {
+/* header .presentation {
   margin: 50px 0;
   background: url("./assets/image/bg.jpeg") no-repeat;
   width: 100%;
@@ -315,9 +315,9 @@ header .presentation {
   background-blend-mode: multiply;
   background-color: #bcbcbc;
   position: relative;
-}
+} */
 
-header .presentation::after {
+/* header .presentation::after {
   content: "Лучшие товары для вашего дома";
   position: absolute;
   top: 100px;
@@ -326,9 +326,9 @@ header .presentation::after {
   font-size: 40px;
   font-weight: 600;
   color: #fff;
-}
+} */
 
-header .presentation::before {
+/* header .presentation::before {
   content: "по низким ценам";
   position: absolute;
   top: 250px;
@@ -337,7 +337,7 @@ header .presentation::before {
   font-size: 15px;
   font-weight: 300;
   color: #fff;
-}
+} */
 
 .categories div {
   display: inline-block;

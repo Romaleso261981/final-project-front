@@ -6,20 +6,20 @@ export const categories = [
     name: "Всё",
   },
   {
-    key: "chairs",
-    name: "Стулья",
+    key: "Rose",
+    name: "Букети з роз",
   },
   {
     key: "tables",
-    name: "Столы",
+    name: "Лілії",
   },
   {
     key: "sofa",
-    name: "Диваны",
+    name: "Букеты тюльпанов и ирисов",
   },
   {
     key: "light",
-    name: "Свет",
+    name: "Сборные букеты",
   },
 ];
 

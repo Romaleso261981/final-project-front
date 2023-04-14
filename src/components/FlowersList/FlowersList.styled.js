@@ -110,8 +110,8 @@ export const DeleteBtn = styled.button`
   }
 `;
 
-
 export const OneFlowers = styled.li`
+  cursor: pointer;
   @media screen and (min-width: 768px) {
     width: calc(50% - 30px);
   }

@@ -12,22 +12,26 @@ import {
   FlowersLink,
 } from "./FlowersList.styled";
 
-const FlowersItem = ({ title, url, description, date }) => {
+const FlowersItem = ({ title, url, description, onShowItem }) => {
   const [isShow, setIsShow] = useState(true);
-  
-  const toggle = (e) => {
-      setIsShow(!isShow);
-    };
+
+  // const toggle = (e) => {
+  //   setIsShow(!isShow);
+  // };
   return (
     <>
-      <OneFlowers>
+      <OneFlowers
+        onClick={(e) => {
+          console.log(e);
+        }}
+      >
         <FlowersLine />
         <FlowersTitle>{title}</FlowersTitle>
         {/* <FlowersDate>{format(new Date(date), "dd/MM/yyyy")}</FlowersDate> */}
-        <Image src={url} alt={title} />
+        <Image src={url} alt={title} onClick={onShowItem} />
 
         <FlowersDescr>{description}</FlowersDescr>
-        <FlowersLink onClick={toggle}>Замовити</FlowersLink>
+        <FlowersLink onClick={onShowItem}>Замовити</FlowersLink>
       </OneFlowers>
     </>
   );

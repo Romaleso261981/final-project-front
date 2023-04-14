@@ -28,7 +28,7 @@ export function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/user" element={<UserPage />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />s
       </Routes>
       <ToastContainer autoClose={1500} pauseOnHover={false} limit={2} />
     </ThemeProvider>

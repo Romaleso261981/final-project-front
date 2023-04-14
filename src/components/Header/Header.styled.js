@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
 export const StyledHeader = styled.header`
-  position: fixed;
   display: flex;
   width: 100%;
   justify-content: space-between;
