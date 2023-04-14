@@ -19,7 +19,7 @@ export const ShowFullItem = ({ onShowItem }) => {
         <p>description</p>
         <b>Cost $</b>
         <div className="add-to-cart" onClick={onShowItem}>
-          close
+          +
         </div>
       </div>
     </div>
