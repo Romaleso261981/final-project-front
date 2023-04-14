@@ -22,7 +22,7 @@ import svg from "../../assets/image/icons_sprite.svg";
 import { Popup } from "../../components/Popup/Popup";
 import { ThemeSwitcher } from "../../components/ThemeBtn/ThemeBtn";
 import { LangSwitcher } from "../../components/LanguageBtn/LangBtn";
-import Navigation from "../../components/Navigation/Navigation";
+import Categories from "../../components/OnlineShop/Categories";
 import { getLang } from "../../redux/lang/langSelectors";
 
 export function Header() {
@@ -61,7 +61,7 @@ export function Header() {
           </LogoSvg>
         </LogoContainer>
         <ControlsWrapper>
-          <Navigation />
+          <Categories />
           <ThemeSwitcher />
           <LangSwitcher />
           {token && (

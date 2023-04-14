@@ -1,10 +1,15 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../Header/Header";
+// import { Header } from "../Header/Header";
+import { Header } from "../OnlineShop/Header";
+import { categories } from "../OnlineShop/Categories";
+console.log(categories);
 
-export const SharedLayout = () => {
+
+
+export const SharedLayout = ({ categories }) => {
   return (
     <>
-      <Header />
+      <Header categories={categories} />
       <Outlet />
     </>
   );
