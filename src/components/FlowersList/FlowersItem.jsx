@@ -18,7 +18,7 @@ import {
   FlowersLink,
 } from "./FlowersList.styled";
 
-const FlowersItem = () => {
+const FlowersItem = ({ title, url, description, onShowItem }) => {
   // const [isShow, setIsShow] = useState(true);
 
   // const toggle = (e) => {
