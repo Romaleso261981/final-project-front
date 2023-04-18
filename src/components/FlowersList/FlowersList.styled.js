@@ -118,7 +118,7 @@ export const OneFlowers = styled.li`
     width: calc(50% - 30px);
   }
   @media screen and (min-width: 1280px) {
-    background-color: rgba(250, 250, 250, 0.3);
+    background-color: rgba(250, 250, 250, 0.8);
     width: calc(33.3333% - 30px);
   }
 `;

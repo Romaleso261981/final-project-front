@@ -48,9 +48,8 @@ export const HomePage = () => {
     setIsFilterItem(fiteredItem);
   }
 
-  function onShowItem(e) {
-    setIsFullItem(FlowersItem.filter((el) => el.productId === e.id));
-
+  function onShowItem(id) {
+     setIsFullItem(FlowersItem.filter((el) => el.productId === id));
     setIsShowFullItem(!showFullItem);
   }
 

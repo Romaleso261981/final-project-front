@@ -1,45 +1,36 @@
-import { format } from "date-fns";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { onAddFlower } from "redux/flowers/flowersOperations";
 
 import {
   OneFlowers,
   FlowersLine,
   FlowersTitle,
   FlowersDescr,
-  FlowersLineVertRight,
-  FlowersLineVertLeft,
   Image,
-  FlowersDate,
   FlowersLink,
 } from "./FlowersList.styled";
 
-const FlowersItem = ({
-  category,
-  instructions,
-  name,
-  photo,
-  price,
-  id,
-  onShowItem,
-}) => {
+const FlowersItem = ({ instructions, name, photo, price, id, onShowItem }) => {
+  const dispatch = useDispatch();
+  const addFlower = () => {
+    dispatch(onAddFlower(id));
+    // setShowAddModal(!showAddModal);
+  };
   return (
     <>
-      <OneFlowers
-        onClick={() => {
-          onShowItem({ id });
-        }}
-      >
-        {/* <FlowersLine /> */}
-        {/* <FlowersLineVertRight /> */}
+      <OneFlowers>
+        <FlowersLine />
         <FlowersTitle>{name}</FlowersTitle>
-        <FlowersTitle>{category}</FlowersTitle>
         <FlowersTitle>{price} $</FlowersTitle>
-        {/* <FlowersDate>{format(new Date(date), "dd/MM/yyyy")}</FlowersDate> */}
-        <Image src={photo} alt={name} onClick={onShowItem} />
+        <Image
+          src={photo}
+          alt={name}
+          onClick={() => {
+            onShowItem(id);
+          }}
+        />
         <FlowersDescr>{instructions}</FlowersDescr>
-        {/* <FlowersLineVertLeft /> */}
-        <FlowersLink>Замовити</FlowersLink>
-        {/* <FlowersLine /> */}
+        <FlowersLink onClick={addFlower}>Замовити</FlowersLink>
       </OneFlowers>
     </>
   );
