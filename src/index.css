@@ -422,16 +422,19 @@ main b,
 
 main .add-to-cart,
 .full-item .add-to-cart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   position: absolute;
   right: 20px;
   bottom: 20px;
   background: #ca5252;
-  width: 35px;
-  height: 35px;
+  width: 55px;
+  height: 30px;
   text-align: center;
   line-height: 35px;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
   transition: transform 500ms ease;

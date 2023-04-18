@@ -7,26 +7,20 @@ const description =
 const date = "25.06.2022";
 const id = "1";
 
-export const ShowFullItem = ({ onShowItem }) => {
+export const ShowFullItem = ({ onShowItem, FullItem }) => {
+  console.log(FullItem[0]);
+  const { category, instructions, name, photo, price, productId } = FullItem[0];
+    console.log(FullItem);
   return (
     <div className="full-item">
       <div>
-        {/* <img
-          src={"./img/" + item.img}
-          onClick={() => this.props.onShowItem(item)}
-        />
-        <h2>{item.title}</h2>
-        <p>{item.desc}</p>
-        <b>{item.price}$</b>
+        <img src={photo} className="item img" />
+        <h2>{name}</h2>
+        <h2>{category}</h2>
+        <p>{instructions}</p>
+        <b>{price} $</b>
         <div className="add-to-cart" onClick={onShowItem}>
-          +
-        </div> */}
-        <img src={url} className="item img" />
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <b>{date} $</b>
-        <div className="add-to-cart" onClick={onShowItem}>
-          +
+          close
         </div>
       </div>
     </div>

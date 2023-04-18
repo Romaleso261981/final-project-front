@@ -5,19 +5,27 @@ import FlowersItem from "./FlowersItem";
 const FlowersList = ({ flowers, onShowItem }) => {
   return (
     <ListWrapper>
-      {flowers
-        .sort((a, b) => (a.date > b.date ? -1 : 1))
-        .map(({ title, url, description, date, _id }) => (
+      {flowers.map(
+        ({
+          category,
+          instructions,
+          name,
+          photo,
+          price,
+          productId,
+        }) => (
           <FlowersItem
             onShowItem={onShowItem}
-            description={description}
-            key={_id}
-            id={_id}
-            title={title}
-            url={url}
-            date={date}
+            key={productId}
+            id={productId}
+            category={category}
+            name={name}
+            photo={photo}
+            price={price}
+            instructions={instructions}
           />
-        ))}
+        )
+      )}
     </ListWrapper>
   );
 };

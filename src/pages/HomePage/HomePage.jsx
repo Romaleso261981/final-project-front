@@ -4,24 +4,66 @@ import FlowersList from "../../components/FlowersList/FlowersList";
 import Background from "../../components/ImgBackground/Background";
 import Categories from "../../components/OnlineShop/Categories";
 import ShowFullItem from "../../components/OnlineShop/ShowFullItem";
-import FlowersItem from "../../data/flowers.json";
+import FlowersItem from "../../data/Flowers2.json";
 import { useState } from "react";
+
+export const categories = [
+  {
+    key: "all",
+    name: "Всі",
+  },
+  {
+    key: "Shrubs",
+    name: "Кущі",
+  },
+  {
+    key: "Container Plants",
+    name: "Контейнерні рослини",
+  },
+  {
+    key: "Herbaceous Perennials",
+    name: "Трав'янисті багаторічники",
+  },
+  {
+    key: "Cacti & Succulents",
+    name: "Кактуси та сукуленти",
+  },
+  {
+    key: "rouse",
+    name: "Рози",
+  },
+];
 
 export const HomePage = () => {
   const [showFullItem, setIsShowFullItem] = useState(false);
+  const [filterItem, setIsFilterItem] = useState([]);
+  const [FullItem, setIsFullItem] = useState({});
 
-  function onShowItem() {
-  setIsShowFullItem(!showFullItem);
+  function chooseCategory(category) {
+    if (category === "all") {
+      setIsFilterItem(FlowersItem);
+      return;
+    }
+    const fiteredItem = FlowersItem.filter((el) => el.category === category);
+    setIsFilterItem(fiteredItem);
   }
+
+  function onShowItem({id}) {
+    console.log(id);
+    console.log(FlowersItem.filter((el) => el.productId === id));
+    setIsFullItem(FlowersItem.filter((el) => el.productId === id));
+    setIsShowFullItem(!showFullItem);
+  }
+
 
   return (
     <Background>
       <Container>
-        <Categories />
-        <FlowersList flowers={FlowersItem} onShowItem={onShowItem} />
+        <Categories chooseCategory={chooseCategory} categories={categories} />
+        <FlowersList flowers={filterItem} onShowItem={onShowItem} />
       </Container>
       {showFullItem && (
-        <ShowFullItem onShowItem={onShowItem} />
+        <ShowFullItem onShowItem={onShowItem} FullItem={FullItem} />
       )}
     </Background>
   );

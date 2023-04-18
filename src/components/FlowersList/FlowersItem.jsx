@@ -18,21 +18,29 @@ import {
   FlowersLink,
 } from "./FlowersList.styled";
 
-const FlowersItem = ({ title, url, description, onShowItem }) => {
-  // const [isShow, setIsShow] = useState(true);
-
-  // const toggle = (e) => {
-  //   setIsShow(!isShow);
-  // };
+const FlowersItem = ({
+  category,
+  instructions,
+  name,
+  photo,
+  price,
+  id,
+  onShowItem,
+}) => {
   return (
     <>
-      <OneFlowers onClick={onShowItem}>
+      <OneFlowers
+        onClick={() => {
+          onShowItem({ id });
+        }}
+      >
         <FlowersLine />
-        <FlowersTitle>{title}</FlowersTitle>
+        <FlowersTitle>{name}</FlowersTitle>
+        <FlowersTitle>{category}</FlowersTitle>
+        <FlowersTitle>{price} $</FlowersTitle>
         {/* <FlowersDate>{format(new Date(date), "dd/MM/yyyy")}</FlowersDate> */}
-        <Image src={url} alt={title} onClick={onShowItem} />
-
-        <FlowersDescr>{description}</FlowersDescr>
+        <Image src={photo} alt={name} onClick={onShowItem} />
+        <FlowersDescr>{instructions}</FlowersDescr>
         <FlowersLink>Замовити</FlowersLink>
       </OneFlowers>
     </>
