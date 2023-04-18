@@ -12,6 +12,7 @@ export const ListWrapper = styled.div`
     gap: 40px;
   }
   @media screen and (min-width: 1280px) {
+    flex-wrap: wrap;
     gap: 40px;
   }
 `;
@@ -111,17 +112,19 @@ export const DeleteBtn = styled.button`
 `;
 
 export const OneFlowers = styled.li`
+  position: relative;
   cursor: pointer;
   @media screen and (min-width: 768px) {
     width: calc(50% - 30px);
   }
   @media screen and (min-width: 1280px) {
+    background-color: rgba(250, 250, 250, 0.3);
     width: calc(33.3333% - 30px);
   }
 `;
 export const FlowersLine = styled.div`
   width: 200px;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, #ff634e 0%, #ffdf48 105.44%);
   border-radius: 40px;
   margin-bottom: 4px;
@@ -130,7 +133,48 @@ export const FlowersLine = styled.div`
     height: 8px;
   }
   @media screen and (min-width: 1280px) {
-    width: 340px;
+    height: 4px;
+    width: 420px;
+  }
+`;
+export const FlowersLineVertLeft = styled.div`
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  width: 4px;
+  height: 400px;
+  background: linear-gradient(90deg, #ff634e 0%, #ffdf48 105.44%);
+  border-radius: 40px;
+  margin-bottom: 4px;
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    height: 8px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: 0px;
+    top: 4px;
+    width: 4px;
+    height: 550px;
+  }
+`;
+export const FlowersLineVertRight = styled.div`
+  position: absolute;
+  right: 12px;
+  top: 80px;
+  width: 4px;
+  height: 400px;
+  background: linear-gradient(90deg, #ff634e 0%, #ffdf48 105.44%);
+  border-radius: 40px;
+  margin-bottom: 4px;
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    height: 8px;
+  }
+  @media screen and (min-width: 1280px) {
+    right: 0px;
+    top: 4px;
+    width: 4px;
+    height: 550px;
   }
 `;
 export const FlowersTitle = styled.h2`
@@ -157,25 +201,31 @@ export const FlowersDescr = styled.p`
     -webkit-line-clamp: 6;
   }
   @media screen and (min-width: 1280px) {
-    -webkit-line-clamp: 5;
+    width: 400px;
+    height: 90px;
+    // -webkit-line-clamp: 5;
   }
 `;
 export const FlowersImgContainer = styled.div`
   min-height: 200px;
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: 1280px) {
+    background-color: #ffffff;
+    min-height: 800px;
+  }
 `;
 export const Image = styled.img`
   width: 240px;
   height: 240px;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 4/4;
   @media screen and (min-width: 768px) {
-    width: 161px;
-    height: 161px;
-    border-radius: 40px;
+    width: 300px;
+    height: 261px;
+    border-radius: 5px;
     margin-right: 32px;
   }
 `;
@@ -193,5 +243,11 @@ export const FlowersLink = styled.a`
   &:hover {
     color: #ff7f2f;
     transform: scale(1.05);
+  }
+  @media screen and (min-width: 768px) {
+    width: 300px;
+    height: 261px;
+    border-radius: 5px;
+    margin-bottom: 32px;
   }
 `;

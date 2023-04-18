@@ -48,23 +48,21 @@ export const HomePage = () => {
     setIsFilterItem(fiteredItem);
   }
 
-  function onShowItem({id}) {
-    console.log(id);
-    console.log(FlowersItem.filter((el) => el.productId === id));
-    setIsFullItem(FlowersItem.filter((el) => el.productId === id));
+  function onShowItem(e) {
+    setIsFullItem(FlowersItem.filter((el) => el.productId === e.id));
+
     setIsShowFullItem(!showFullItem);
   }
-
 
   return (
     <Background>
       <Container>
         <Categories chooseCategory={chooseCategory} categories={categories} />
         <FlowersList flowers={filterItem} onShowItem={onShowItem} />
+        {showFullItem && (
+          <ShowFullItem onShowItem={onShowItem} FullItem={FullItem} />
+        )}
       </Container>
-      {showFullItem && (
-        <ShowFullItem onShowItem={onShowItem} FullItem={FullItem} />
-      )}
     </Background>
   );
 };

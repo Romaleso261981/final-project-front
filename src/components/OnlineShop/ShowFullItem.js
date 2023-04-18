@@ -8,11 +8,9 @@ const date = "25.06.2022";
 const id = "1";
 
 export const ShowFullItem = ({ onShowItem, FullItem }) => {
-  console.log(FullItem[0]);
   const { category, instructions, name, photo, price, productId } = FullItem[0];
-    console.log(FullItem);
   return (
-    <div className="full-item">
+    <div className="full-item" onClick={onShowItem}>
       <div>
         <img src={photo} className="item img" />
         <h2>{name}</h2>
